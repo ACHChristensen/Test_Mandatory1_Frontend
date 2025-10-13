@@ -2,6 +2,7 @@ app.test.js;
 const request = require("supertest");
 const app = require("./script");
 const { describe } = require("yargs");
+var testPerson = {}; //TODO Delete this
 
 //TODO - Testing endpoints
 describe("API routes", () => {
