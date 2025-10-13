@@ -8,7 +8,7 @@ document.querySelector('#frmGenerate').addEventListener('submit', (e) => {
     if (e.target.chkPerson.checked) {
         endpoint += 'person'
         const numPersons = parseInt(e.target.txtNumberPersons.value);
-        if (numPersons > 1) {
+        if (numPersons > 1) { 
             endpoint += '?n=' + numPersons;
         }
     } else {
@@ -33,7 +33,12 @@ const handlePersonData = (data) => {
     output.innerHTML = '';
 
     if (data.length === undefined) {
-        data = [data];
+        console.log("data.length === undefined",data);
+        //data = [data];
+        data = [data.person];
+       /* data.push(data.person);
+        console.log("data.length === undefined",data);*/
+        
     }
 
     data.forEach(item => {
@@ -80,7 +85,7 @@ const handlePersonData = (data) => {
             phoneNumberValue.innerText = item.phoneNumber;
             phoneNumberValue.classList.remove('hidden');
             personCard.querySelector('.phoneNumber').classList.remove('hidden');
-        }
+        }        
 
         output.appendChild(personCard);
     });

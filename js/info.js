@@ -1,1 +1,1 @@
-export const baseUrl = "http://localhost/fake_info";
+export const baseUrl = "http://localhost:3000";
