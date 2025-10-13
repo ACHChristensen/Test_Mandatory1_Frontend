@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/arturomorarioja/js_fake_info_frontend#readme",
   "dependencies": {
+    "eslint": "^9.37.0",
     "jest": "^30.2.0"
   }
 }
