@@ -18,6 +18,7 @@ document.querySelector("#frmGenerate").addEventListener("submit", (e) => {
     // API call
     fetch(baseUrl + endpoint)
     .then(response => {
+        //console.log(!response.ok)
         if (!response.ok) {
             handleError();
         } else {
@@ -31,13 +32,19 @@ document.querySelector("#frmGenerate").addEventListener("submit", (e) => {
 const handlePersonData = (data) => {
     const output = document.querySelector("#output");
     output.innerHTML = "";
-
+    console.log(data)
     if (data.length === undefined) {
         //console.log("data.length === undefined",data);
         //data = [data];
-        data = [data.person];
-       /* data.push(data.person);
-        console.log("data.length === undefined",data);*/
+        
+        if (data.hasOwnProperty("person")) {
+            //data = [data.person];
+            console.log("person");
+        }else{
+            data = [data];
+        };
+        /* data.push(data.person);*/
+        //console.log("data.length === undefined2",data);
         
     }
 
@@ -93,6 +100,7 @@ const handlePersonData = (data) => {
 };
 
 const handleError = () => {
+    console.log();
     const output = document.querySelector("#output");
     
     output.innerHTML = 
