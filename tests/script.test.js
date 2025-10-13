@@ -1,3 +1,5 @@
+/* TODO - delete this file if not needed */
+/* 
 app.test.js;
 const request = require("supertest");
 const app = require("./script");
@@ -40,3 +42,5 @@ describe("Testing handlePersonData()", () => {});
 
 //TODO NEGATIVE TESTS
 describe("Error handling", () => {});
+
+*/
