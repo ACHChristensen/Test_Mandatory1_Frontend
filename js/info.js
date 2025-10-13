@@ -1,2 +1,1 @@
-const baseUrl = "http://localhost:3000";
-module.exports = { baseUrl };
+export const baseUrl = "http://localhost:3000";

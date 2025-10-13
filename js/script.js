@@ -34,12 +34,12 @@ const handlePersonData = (data) => {
     output.innerHTML = "";
     console.log(data)
     if (data.length === undefined) {
-        //console.log("data.length === undefined",data);
+        //console.log("data.length === undefined",data.hasOwnProperty("person"));
         //data = [data];
         
         if (data.hasOwnProperty("person")) {
-            //data = [data.person];
-            console.log("person");
+            data = [data.person];
+            //console.log("person");
         }else{
             data = [data];
         };
