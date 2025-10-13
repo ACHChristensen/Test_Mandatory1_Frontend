@@ -32,6 +32,11 @@ jobs:
         with:
           main-branch: 'main'
           file-extension: 'js'
+      - name: jest-check
+        uses: soomo/jest-check@0.0.5
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JEST_FOLDER: ${{ github.workspace }}/spec
   build:
     runs-on: ubuntu-latest
     steps:
