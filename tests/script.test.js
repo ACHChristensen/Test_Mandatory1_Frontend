@@ -1,4 +1,12 @@
 /* TODO - delete this file if not needed */
+const { baseUrl } = require("../js/info.js");
+//import getFakeInfo from "../script";
+describe("API routes", () => {
+  test("ready", async () => {
+    expect(typeof baseUrl).toBe("string");
+    expect(baseUrl).toBe("http://localhost:3000");
+  });
+});
 /* 
 app.test.js;
 const request = require("supertest");
