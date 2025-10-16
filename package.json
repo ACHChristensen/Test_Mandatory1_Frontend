@@ -2,7 +2,7 @@
   "name": "js_fake_info_frontend",
   "version": "1.0.0",
   "description": "Frontent for the [Fake Data Generator](https://github.com/arturomorarioja/fake_info), which generates fake data of nonexistent Danish persons.",
-  "main": "script.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --verbose"
   },
