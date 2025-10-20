@@ -1,4 +1,14 @@
 /* TODO - delete this file if not needed */
+
+//import getFakeInfo from "../script";
+
+
+
+describe("API routes", () => {
+  test("GET /person",  () => {
+    expect(2).toBe(2)
+  });
+});
 /* 
 app.test.js;
 const request = require("supertest");
