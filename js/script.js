@@ -32,24 +32,14 @@ document.querySelector("#frmGenerate").addEventListener("submit", (e) => {
 const handlePersonData = (data) => {
     const output = document.querySelector("#output");
     output.innerHTML = "";
-    console.log(data)
     if (data.length === undefined) {
-        //console.log("data.length === undefined",data.hasOwnProperty("person"));
-        //data = [data];
-        
-        if (data.hasOwnProperty("person")) {
-            data = [data.person];
-            //console.log("person");
-        }else{
-            data = [data];
-        };
-        /* data.push(data.person);*/
-        //console.log("data.length === undefined2",data);
-        
+        data = [data];
     }
 
-    data.forEach(item => {
+    data.forEach((item, index) => {
         const personCard = document.importNode(document.getElementById("personTemplate").content, true);
+        personCard.querySelector(".personCard").id = `personCard-${index}`;
+
         if (item.CPR !== undefined) {
             const cprValue = personCard.querySelector(".cprValue");
             cprValue.innerText = item.CPR;
@@ -93,7 +83,6 @@ const handlePersonData = (data) => {
             phoneNumberValue.classList.remove("hidden");
             personCard.querySelector(".phoneNumber").classList.remove("hidden");
         }        
-
         output.appendChild(personCard);
     });
     output.classList.remove("hidden");
